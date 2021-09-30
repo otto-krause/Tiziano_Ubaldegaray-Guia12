@@ -1,0 +1,180 @@
+1-
+#include<stdio.h>
+#include<stdlib.h>
+
+int entrada(int num)
+{
+    scanf("%d",&num);
+    return num;
+}
+
+void main()
+{
+    printf("ingrese el primer numero\n");
+    int a=entrada(0);
+    printf("el numero es %d\n",a);
+    int b=entrada(0);
+    printf("el numero es %d\n",b);
+}
+2-
+#include<stdio.h>
+#include<stdlib.h>
+
+int calculoarea(int a, int b)
+{
+    return (a*b);
+}
+
+int calculoperim(int a, int b)
+{
+    return (a*2)+(b*2);
+}
+
+void main()
+{
+    int a, b, area, perim;
+    printf("introduzca los lados del rectangulo cuyo area y perimetro desea conocer\n");
+    printf("lado 1: ");
+    scanf("%d",&a);
+    printf("lado 2: ");
+    scanf("%d",&b);
+    area=calculoarea(a,b);
+    printf("el area del rectangulo es %d\n",area);
+    perim=calculoperim(a,b);
+    printf("el perimetro del rectangulo es %d\n",perim);
+
+}
+3-
+#include<stdio.h>
+#include<stdlib.h>
+
+float calcporhombres(float hombres, float mujeres)
+{
+    return hombres*100/(hombres+mujeres);
+}
+
+float calcpormujeres(float hombres, float mujeres)
+{
+    return mujeres*100/(hombres+mujeres);
+}
+
+void main()
+{
+    float hombres, mujeres, porhomb, pormuj;
+    printf("introduzca la cantidad de:\n");
+    printf("hombres: ");
+    scanf("%f",&hombres);
+    printf("mujeres: ");
+    scanf("%f",&mujeres);
+    porhomb=calcporhombres(hombres,mujeres);
+    pormuj=calcpormujeres(hombres,mujeres);
+    printf("el porcentaje de hombres es de %f y el de mujeres es de %f",porhomb,pormuj);
+}
+4-
+#include<stdio.h>
+#include<stdlib.h>
+
+float calculo(float a, float b)
+{
+    return (a/b);
+}
+
+void main()
+{
+    float superficie, fuerza, presion;
+    printf("ingrese los valores de:\n");
+    printf("la fuerza: ",&fuerza);
+    scanf("%f",&fuerza);
+    printf("la superficie: ");
+    scanf("%f",&superficie);
+    presion=calculo(fuerza,superficie);
+    printf("la presion es %f",presion);
+}
+5-
+#include<stdio.h>
+#include<stdlib.h>
+
+int suma(int R1, int R2, int R3, int R4, int R5)
+{
+    return R1+R2+R3+R4+R5;
+}
+
+void main()
+{
+    int R1, R2, R3, R4, R5;
+    printf("introduzca los valores de la resistencia:\n");
+    printf("resistencia 1: ");
+    scanf("%d",&R1);
+    printf("resistencia 2: ");
+    scanf("%d",&R2);
+    printf("resistencia 3: ");
+    scanf("%d",&R3);
+    printf("resistencia 4: ");
+    scanf("%d",&R4);
+    printf("resistencia 5: ");
+    scanf("%d",&R5);
+    int RT=suma(R1,R2,R3,R4,R5);
+    printf("los valores de las resistencias son, en orden: %d, %d, %d, %d, %d, y la resistencia total es %d",R1,R2,R3,R4,R5,RT);
+}
+6-
+#include<stdio.h>
+#include<stdlib.h>
+
+float calculo(float a)
+{
+    return a/8;
+}
+
+void main()
+{
+    float a, resul;
+    printf("introduzca el numero cuya octava parte desea conocer\n");
+    scanf("%f",&a);
+    resul=calculo(a);
+    printf("la octava parte del numero introducido es %f",resul);
+}
+7-
+#include<stdio.h>
+#include<stdlib.h>
+
+int identificar(int a, int b)
+{
+    int resul;
+    if (a<b)
+    {
+        resul=1;
+    }
+    else
+    {
+        if (a>b)
+        {
+            resul=2;
+        }
+        else
+        {
+            resul=3;
+        }
+    }
+    return resul;
+}
+
+void main()
+{
+    int a, b;
+    printf("introduzca el primer numero: ");
+    scanf("%d",&a);
+    printf("introduzca el segundo numero: ");
+    scanf("%d",&b);
+    int num=identificar(a,b);
+    switch (num)
+    {
+    case 1:
+        printf("el numero %d es mayor al numero %d",b,a);
+        break;
+    case 2:
+        printf("el numero %d es mayor al numero %d",a,b);
+        break;
+    case 3:
+        printf("los numeros %d y %d son iguales",a,b);
+    }
+}
